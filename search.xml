@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[Leetcode.98  Validate Binary Search Tree]]></title>
       <url>http://haorlee.github.io/2016/04/29/Validate-Binary-Search-Tree/</url>
-      <content type="html"><![CDATA[<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><p>Given a binary tree, determine if it is a valid binary search tree (BST).<br>$a^{2}<br>Assume a BST is defined as follows:</p>
+      <content type="html"><![CDATA[<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><p>Given a binary tree, determine if it is a valid binary search tree (BST).<br>$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$<br>Assume a BST is defined as follows:</p>
 <ul>
 <li>The left subtree of a node contains only nodes with keys less than the node’s key.</li>
 <li>The right subtree of a node contains only nodes with keys greater than the node’s key.</li>
