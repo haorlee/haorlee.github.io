@@ -7,7 +7,7 @@
       <title><![CDATA[Leetcode.110 Balanced Binary Tree]]></title>
       <url>http://haorlee.github.io/2016/05/17/Balanced-Binary-Tree/</url>
       <content type="html"><![CDATA[<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><p>Given a binary tree, determine if it is height-balanced.</p>
-<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.<br><br><br><br>Tag: Tree, Deep-first Search</p>
+<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.<br><br><br>Tag: Tree, Deep-first Search</p>
 <p>Degree: Easy</p>
 <p><br><br></p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>判断一棵树是否为AVL树，也就是对于每个节点来说，判断当前节点的左右子树高度差的绝对值是否小与1。</p>
