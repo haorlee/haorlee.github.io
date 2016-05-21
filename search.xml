@@ -20,7 +20,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Leetcode.110&nbsp;&nbsp;Balanced Binary Tree]]></title>
+      <title><![CDATA[Leetcode.110 Balanced Binary Tree]]></title>
       <url>http://haorlee.github.io/2016/05/17/Balanced-Binary-Tree/</url>
       <content type="html"><![CDATA[<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><p>Given a binary tree, determine if it is height-balanced.</p>
 <p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.</p>
@@ -34,7 +34,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Leetcode.98&nbsp;&nbsp;Validate Binary Search Tree]]></title>
+      <title><![CDATA[Leetcode.98 Validate Binary Search Tree]]></title>
       <url>http://haorlee.github.io/2016/04/29/Validate-Binary-Search-Tree/</url>
       <content type="html"><![CDATA[<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><p>Given a binary tree, determine if it is a valid binary search tree (BST).<br>Assume a BST is defined as follows:</p>
 <ul>
