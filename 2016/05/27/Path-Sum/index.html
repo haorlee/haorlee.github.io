@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tree,DFS,BFS," />
+  <meta name="keywords" content="Hexo, haorLee" />
 
 
 
@@ -84,22 +84,22 @@
 
 
 
-<meta name="description" content="TitleGiven a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Tag: Tree, Deep-first Search, Bread">
+<meta name="description" content="TitleGiven a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+For example:
+Given the below binary tree and s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode.111 Minimum Depth of Binary Tree">
-<meta property="og:url" content="http://haorlee.github.io/2016/05/17/Minimum-Depth-of-Binary-Tree/index.html">
+<meta property="og:title" content="Leetcode.112 Path Sum">
+<meta property="og:url" content="http://haorlee.github.io/2016/05/27/Path-Sum/index.html">
 <meta property="og:site_name" content="HaorLee">
-<meta property="og:description" content="TitleGiven a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Tag: Tree, Deep-first Search, Bread">
-<meta property="og:updated_time" content="2016-05-21T08:27:42.000Z">
+<meta property="og:description" content="TitleGiven a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+For example:
+Given the below binary tree and s">
+<meta property="og:updated_time" content="2016-05-27T15:18:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode.111 Minimum Depth of Binary Tree">
-<meta name="twitter:description" content="TitleGiven a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Tag: Tree, Deep-first Search, Bread">
+<meta name="twitter:title" content="Leetcode.112 Path Sum">
+<meta name="twitter:description" content="TitleGiven a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+For example:
+Given the below binary tree and s">
 
 
 
@@ -117,7 +117,7 @@ Tag: Tree, Deep-first Search, Bread">
   };
 </script>
 
-  <title> Leetcode.111 Minimum Depth of Binary Tree | HaorLee </title>
+  <title> Leetcode.112 Path Sum | HaorLee </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -290,7 +290,7 @@ Tag: Tree, Deep-first Search, Bread">
             
             
               
-                Leetcode.111 Minimum Depth of Binary Tree
+                Leetcode.112 Path Sum
               
             
           </h1>
@@ -302,38 +302,19 @@ Tag: Tree, Deep-first Search, Bread">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-17T20:24:00+08:00" content="2016-05-17">
-              2016-05-17
+            <time itemprop="dateCreated" datetime="2016-05-27T23:16:14+08:00" content="2016-05-27">
+              2016-05-27
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/17/Minimum-Depth-of-Binary-Tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/17/Minimum-Depth-of-Binary-Tree/" itemprop="commentsCount"></span>
+                <a href="/2016/05/27/Path-Sum/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/27/Path-Sum/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -342,7 +323,7 @@ Tag: Tree, Deep-first Search, Bread">
           
 
           
-         <span id="/2016/05/17/Minimum-Depth-of-Binary-Tree/"class="leancloud_visitors"  data-flag-title="Leetcode.111 Minimum Depth of Binary Tree">
+         <span id="/2016/05/27/Path-Sum/"class="leancloud_visitors"  data-flag-title="Leetcode.112 Path Sum">
              &nbsp; | &nbsp;  阅读次数
             </span>
       
@@ -359,17 +340,28 @@ Tag: Tree, Deep-first Search, Bread">
       
 
       
-        <h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><p>Given a binary tree, find its minimum depth.</p>
-<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
-<p>Tag: Tree, Deep-first Search, Breadth-first Search</p>
+        <h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
+<p>For example:</p>
+<p>Given the below binary tree and sum = 22,</p>
+<pre><code>      5
+     / \
+    4   8
+   /   / \
+  11  13  4
+ /  \      \
+7    2      1
+</code></pre><p>return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.</p>
+<p>Tag: Tree, Deep-first Search</p>
 <p><br><br></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>题意为找到一棵树从根节点到叶子节点的最短距离。</p>
-<p>显而易见，需要用递归求解，运用DFS，找到每一个节点到叶子节点的最短距离。</p>
-<p>AC代码如下。</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>比较简单的题目，树的从根节点到叶子节点的判断，可以直接想到用dfs递归判断左子树和右子树。</p>
+<p>解法：</p>
+<ul>
+<li>递归的判断左子树和右子树，每往下递归一层都相应的减小sum的值 (sum - 当前节点的value)。</li>
+<li>若当前节点为叶子节点，并且value与sum相等，则返回true</li>
+<li>若当前节点为空，返回false</li>
+</ul>
 <p><br><br></p>
-<h3 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h3><h4 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">nullptr</span>)</span><br><span class="line">            return <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> left = minDepth(root-&gt;left);</span><br><span class="line">        <span class="keyword">int</span> right = minDepth(root-&gt;right);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(left == <span class="number">0</span> &amp;&amp; right == <span class="number">0</span>)</span><br><span class="line">            return <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(left == <span class="number">0</span>)</span><br><span class="line">            left = INT_MAX;</span><br><span class="line">        <span class="keyword">if</span>(right == <span class="number">0</span>)</span><br><span class="line">            right = INT_MAX;</span><br><span class="line">        return min(left, right) + <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">nullptr</span>)</span><br><span class="line">            return <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;left == <span class="literal">nullptr</span> &amp;&amp; root-&gt;right == <span class="literal">nullptr</span>)</span><br><span class="line">            return <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> minDept = INT_MAX;</span><br><span class="line">        findMinDept(root, minDept, <span class="number">1</span>);</span><br><span class="line">        return minDept;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">findMinDept</span><span class="params">(TreeNode *root, <span class="keyword">int</span> &amp;minDept, <span class="keyword">int</span> dept)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">nullptr</span>)</span><br><span class="line">            return;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;left == <span class="literal">nullptr</span> &amp;&amp; root-&gt;right == <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            minDept = dept &gt; minDept ? minDept : dept;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        findMinDept(root-&gt;left, minDept, dept + <span class="number">1</span>);</span><br><span class="line">        findMinDept(root-&gt;right, minDept, dept + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasPathSum</span><span class="params">(TreeNode* root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">nullptr</span>)</span><br><span class="line">            return <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;val == sum &amp;&amp; root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>)</span><br><span class="line">            return <span class="literal">true</span>;</span><br><span class="line">        return hasPathSum(root-&gt;left, sum - root-&gt;val) || hasPathSum(root-&gt;right, sum - root-&gt;val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -388,32 +380,18 @@ Tag: Tree, Deep-first Search, Bread">
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Tree/" rel="tag">#Tree</a>
-          
-            <a href="/tags/DFS/" rel="tag">#DFS</a>
-          
-            <a href="/tags/BFS/" rel="tag">#BFS</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/17/Balanced-Binary-Tree/" rel="next" title="Leetcode.110 Balanced Binary Tree">
-                <i class="fa fa-chevron-left"></i> Leetcode.110 Balanced Binary Tree
+              <a href="/2016/05/17/Minimum-Depth-of-Binary-Tree/" rel="next" title="Leetcode.111 Minimum Depth of Binary Tree">
+                <i class="fa fa-chevron-left"></i> Leetcode.111 Minimum Depth of Binary Tree
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/27/Path-Sum/" rel="prev" title="Leetcode.112 Path Sum">
-                Leetcode.112 Path Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -428,10 +406,10 @@ Tag: Tree, Deep-first Search, Bread">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/05/17/Minimum-Depth-of-Binary-Tree/"
-     data-title="Leetcode.111 Minimum Depth of Binary Tree"
+        <div class="ds-share flat" data-thread-key="2016/05/27/Path-Sum/"
+     data-title="Leetcode.112 Path Sum"
      data-content=""
-     data-url="http://haorlee.github.io/2016/05/17/Minimum-Depth-of-Binary-Tree/">
+     data-url="http://haorlee.github.io/2016/05/27/Path-Sum/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -458,8 +436,8 @@ Tag: Tree, Deep-first Search, Bread">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/17/Minimum-Depth-of-Binary-Tree/"
-           data-title="Leetcode.111 Minimum Depth of Binary Tree" data-url="http://haorlee.github.io/2016/05/17/Minimum-Depth-of-Binary-Tree/">
+      <div class="ds-thread" data-thread-key="2016/05/27/Path-Sum/"
+           data-title="Leetcode.112 Path Sum" data-url="http://haorlee.github.io/2016/05/27/Path-Sum/">
       </div>
     
   </div>
@@ -570,7 +548,7 @@ Tag: Tree, Deep-first Search, Bread">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Title"><span class="nav-number">1.</span> <span class="nav-text">Title</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC-Code"><span class="nav-number">3.</span> <span class="nav-text">AC Code</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-1"><span class="nav-number">3.1.</span> <span class="nav-text">Method 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-2"><span class="nav-number">3.2.</span> <span class="nav-text">Method 2</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Title"><span class="nav-number">1.</span> <span class="nav-text">Title</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC-Code"><span class="nav-number">3.</span> <span class="nav-text">AC Code</span></a></li></ol></div>
             
           </div>
         </section>
